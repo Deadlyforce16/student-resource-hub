@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student Resource Hub</title>
+  <meta name="description" content="Browse curated study resources for mathematics, science, computing and cloud topics, and search Wikipedia from one place.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Student Resource Hub</h1>
+      <p class="tagline">Curated study links and live Wikipedia search, hosted on Microsoft Azure.</p>
+
+      <form id="search-form" class="search-form" role="search" autocomplete="off">
+        <label for="search-input" class="visually-hidden">Search resources</label>
+        <input id="search-input" type="search" placeholder="Try &quot;calculus&quot;, &quot;photosynthesis&quot; or &quot;python&quot;" maxlength="100">
+        <button type="submit">Search</button>
+      </form>
+    </div>
+  </header>
+
+  <main class="container">
+    <section aria-labelledby="filter-heading">
+      <h2 id="filter-heading" class="visually-hidden">Filter by category</h2>
+      <div id="filters" class="filters"></div>
+    </section>
+
+    <section aria-labelledby="curated-heading">
+      <h2 id="curated-heading">Curated resources <span id="curated-count" class="count"></span></h2>
+      <p id="curated-status" class="status" role="status" aria-live="polite"></p>
+      <div id="curated-results" class="grid"></div>
+    </section>
+
+    <section aria-labelledby="wiki-heading">
+      <h2 id="wiki-heading">Wikipedia results</h2>
+      <p id="wiki-status" class="status" role="status" aria-live="polite"></p>
+      <div id="wiki-results" class="grid"></div>
+      <p class="note">Wikipedia results come from the public Wikipedia search service and cover Wikipedia only, not the whole web.</p>
+    </section>
+
+    <section class="azure-box" aria-labelledby="azure-heading">
+      <h2 id="azure-heading">How this site uses Azure</h2>
+      <ul>
+        <li><strong>Azure Static Web Apps</strong> hosts the site on the Free plan: no server to manage (PaaS).</li>
+        <li><strong>Automatic HTTPS</strong> and global content delivery are included.</li>
+        <li><strong>GitHub Actions</strong> redeploys the site automatically after every code change.</li>
+        <li><strong>Consumption-based and free</strong>: the Free plan costs nothing within its quotas.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Student Resource Hub &middot; Cloud Computing project by Prohor Muchev (ID 11281)</p>
+      <p>Saved favorites are stored only in this browser.</p>
+    </div>
+  </footer>
+
+  <script src="resources.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
